@@ -5,7 +5,7 @@
 
 
 .App-header {
-  background-color: white;
+  background-color: hsl(40, 23%, 97%);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
 }
 
 .card{
-  width: 30vmin;
+  width: 70vmin;
   aspect-ratio: 5/7;
   border-radius: 2vmin;
   
@@ -29,11 +29,44 @@
 
 .rules{
   background-color: rgba(0, 0, 0, 0.05);
+  font-size: 3vmin;
+  color: hsl(42, 15%, 13%);
+  text-align: center;
+  list-style-type: none;
+  list-style-position: inside;
   
+}
+
+.rules-text{
+  margin: 10px, 5px, 5px, 10px;
+  padding: 1.5vmin, 0.5vmin, 0.5vmin, 0.5vmin;
+}
+
+ul {
+  padding: inherit;
+  line-height: 2;
+  margin: inherit;
 }
 
 h5 {
   font-family: 'Nunito Sans', sans-serif;
   color: hsl(360, 67%, 44%);
+  text-align: center;
+  font-size: 6vmin;
 }
 
+.card-holder-button > button{
+  margin-top: 3vmin;
+  display: inline-flex;
+  justify-content: center;
+  height: 8vmin;
+  aspect-ratio: 1/1;
+  color: hsl(360, 67%, 44%);
+  font-size: 6vmin;
+  border: hsl(40, 23%, 97%);
+  background-color: hsl(40, 23%, 97%);
+  
+}
+
+/* font-family: 'Gaegu', cursive;
+font-family: 'Nunito Sans', sans-serif; */
