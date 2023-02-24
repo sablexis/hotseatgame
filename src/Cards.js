@@ -1,5 +1,7 @@
-import RulesCard from './RulesCard';
-export default function Cards() {
-    < RulesCard />
+import GameCards from "./GameCards";
 
-};
+export default function Cards() {
+    return(
+        <GameCards />
+    );
+}

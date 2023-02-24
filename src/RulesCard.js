@@ -1,6 +1,7 @@
 export default function RulesCard() {
     return (
-        <div className = "rules card">
+        <>
+        <div className = "rules-card">
               <h5>Hot Seat:<br></br> The Drinking Game 🔥</h5>
               <div className = "rules-text">
                 <ul>
@@ -10,6 +11,7 @@ export default function RulesCard() {
                   <li>If the hot seat player wishes not to answer they must drink</li>
                 </ul>
               </div>
-            </div>
+        </div>
+        </>
       );
 }

@@ -20,20 +20,37 @@
   color: #61dafb;
 }
 
-.card{
+.card-holder{
+  position: absolute;
+  width: 75vmin;
+  aspect-ratio: 5/7;
+  
+}
+
+.Cards{
   width: 70vmin;
   aspect-ratio: 5/7;
   border-radius: 2vmin;
   
 }
 
-.rules{
+.gameCards{
+  position: inherit;
+  width: 70vmin;
+  aspect-ratio: 5/7;
+  border-radius: 2vmin;
+  
+}
+
+.rules-card{
+  position: inherit;
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 3vmin;
   color: hsl(42, 15%, 13%);
   text-align: center;
   list-style-type: none;
   list-style-position: inside;
+  border-radius: 2vmin;
   
 }
 
@@ -53,10 +70,11 @@ h5 {
   color: hsl(360, 67%, 44%);
   text-align: center;
   font-size: 6vmin;
+  margin-bottom: 5vmin;
 }
 
 .card-holder-button > button{
-  margin-top: 3vmin;
+  margin-top: 100vmin;
   display: inline-flex;
   justify-content: center;
   height: 8vmin;
