@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: hsl(40, 23%, 97%);
 }
 
 
@@ -14,6 +15,7 @@
   font-size: calc(10px + 2vmin);
   color: white;
   place-items: center;
+  
 }
 
 .App-link {
@@ -22,12 +24,21 @@
 
 .card-holder{
   position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 75vmin;
   aspect-ratio: 5/7;
   
 }
 
-.Cards{
+.gameCards{
   width: 70vmin;
   aspect-ratio: 5/7;
   border-radius: 2vmin;
@@ -36,9 +47,28 @@
 
 .gameCards{
   position: inherit;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-family: 'Gaegu', cursive;
+  font-size: 7vmin;
+  color: hsl(42, 15%, 13%);
+  text-align: center;
   width: 70vmin;
   aspect-ratio: 5/7;
   border-radius: 2vmin;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.gameCards > p {
+  margin-top: 35vmin;
+  margin-left: 2vmin;
+  margin-right: 2vmin;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
   
 }
 
@@ -51,12 +81,15 @@
   list-style-type: none;
   list-style-position: inside;
   border-radius: 2vmin;
+  width: 70vmin;
+  aspect-ratio: 5/7;
   
 }
 
 .rules-text{
   margin: 10px, 5px, 5px, 10px;
   padding: 1.5vmin, 0.5vmin, 0.5vmin, 0.5vmin;
+  
 }
 
 ul {
@@ -73,9 +106,9 @@ h5 {
   margin-bottom: 5vmin;
 }
 
-.card-holder-button > button{
-  margin-top: 100vmin;
-  display: inline-flex;
+.newCard-button {
+  margin-top: 110vmin;
+  display: flex;
   justify-content: center;
   height: 8vmin;
   aspect-ratio: 1/1;
@@ -83,8 +116,25 @@ h5 {
   font-size: 6vmin;
   border: hsl(40, 23%, 97%);
   background-color: hsl(40, 23%, 97%);
+  align-items: center;
   
 }
+
+.hide-button {
+  margin-top: 110vmin;
+  display: flex;
+  justify-content: center;
+  height: 8vmin;
+  aspect-ratio: 1/1;
+  color: hsl(360, 67%, 44%);
+  font-size: 6vmin;
+  border: hsl(40, 23%, 97%);
+  background-color: hsl(40, 23%, 97%);
+  align-items: center;
+  
+}
+
+
 
 /* font-family: 'Gaegu', cursive;
 font-family: 'Nunito Sans', sans-serif; */

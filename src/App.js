@@ -1,42 +1,51 @@
 import { render } from '@testing-library/react';
-import React, {useState} from 'react';
 import './App.css';
 import Cards from './Cards';
+import React, {useState} from 'react';
+import HideButton from './HideButton';
+import CardCyclerButton from './CardCyclerButton';
+import {  getRandomItem } from './CardData';
 import RulesCard from './RulesCard';
 
 
 
-function CardHolder() {
 
-  const [show, setShow] = useState(true)
 
-  return (
-    <div className="card-holder">
-      {
-      show?<RulesCard />: null
-      }
-      < Cards />
-      <div className = "card-holder-button">
-        <button id='new card' onClick={() =>setShow(false)}>
-        <i class="fa-solid fa-circle-plus"></i>
-        </button> 
-      </div>
-  </div>
-  );
+
+function App() {
+
+  const [showRulesCard, setshowRulesCard] = useState(true)
+  const [showCardCyclerButton, setshowCardCyclerButton] = useState(false)
+  const [cardText, setCardText] = useState('')
+
+  function handleHideClick(){
+      
+    setshowRulesCard(false);
+    setshowCardCyclerButton(true);
     
   }
 
-function App() {
+
+  function handleCyclerClick(){
+      
+    const card = getRandomItem();
+    setCardText(card.text);
+    
+  }
+
+
   return (
     <div className="App">
       <header className="App-header">      
-        <CardHolder />
+      <Cards showRulesCard={showRulesCard} cardText={cardText} />
+        {showCardCyclerButton && <CardCyclerButton onClick={handleCyclerClick} />}
+        {!showCardCyclerButton && <HideButton onClick={handleHideClick} />}
       </header>
-
-
-
+      
     </div>
   );
+
+  
 }
 
 export default App;
