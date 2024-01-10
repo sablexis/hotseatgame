@@ -10,8 +10,6 @@ import RulesCard from './RulesCard';
 
 
 
-
-
 function App() {
 
   const [showRulesCard, setshowRulesCard] = useState(true)
