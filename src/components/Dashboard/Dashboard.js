@@ -2,8 +2,8 @@ import React from "react";
 
 export default function Dashboard() {
     return(
-        <h2>
+        <h5>
             Dashboard
-        </h2>
+        </h5>
     );
 }

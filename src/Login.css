@@ -1,0 +1,13 @@
+.login-wrapper {
+    position: inherit;
+    background-color: rgba(0, 0, 0, 0.05);
+    font-size: 3vmin;
+    color: hsl(42, 15%, 13%);
+    text-align: center;
+    list-style-type: none;
+    list-style-position: inside;
+    border-radius: 2vmin;
+    width: 70vmin;
+    aspect-ratio: 5/7;
+}
+
