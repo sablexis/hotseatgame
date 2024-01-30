@@ -1,22 +1,40 @@
-import React from "react";
-import './Login.css';
+import React, { useState } from "react";
+import axios from 'axios';
+import '/Users/sabrina/hot-seat-game/src/Login.css';
 
-export default function Login(){
-    return(
-        <div className="login-wrapper">
-        <form action={login}>
-            <label>
-                <p>username:</p>
-                <input name="username" />
-            </label>
-            <label>
-                <p>password:</p>
-                <input name="password" />
-            </label>
-            <div>
-                <button type="submit">submit</button>
-            </div>
-        </form>
-        </div>
-    )
-}
+
+
+const Login = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/login', { username, password });
+      console.log(response.data);
+    } catch (error) {
+      console.error('Login error:', error);
+    }
+  };
+
+  const handleRegister = async () => {
+    try {
+      const response = await axios.post('http://localhost:5000/api/auth/register', { username, password });
+      console.log(response.data);
+    } catch (error) {
+      console.error('Registration error:', error);
+    }
+  };
+
+  return (
+    <div className="login-wrapper">
+      <h1>Login or Register</h1>
+      <input type="text" placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
+      <input type="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} />
+      <button onClick={handleLogin}>Login</button>
+      <button onClick={handleRegister}>Register</button>
+    </div>
+  );
+};
+
+export default Login;
